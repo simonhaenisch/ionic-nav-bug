@@ -1,0 +1,24 @@
+{
+	"version": 2,
+	"name": "ionic-nav-bug",
+	"alias": "ionic-nav-bug",
+
+	"builds": [
+		{ "src": "package.json", "use": "@now/static-build", "config": { "distDir": "www" } }
+	],
+
+	"routes": [
+		{ "src": "/build/p-.*", "headers": { "Cache-Control": "max-age=31536000, immutable" }, "continue": true },
+
+		{ "src": "/favicon.ico", "dest": "/assets/icon/favicon.ico" },
+		{ "src": "/manifest.json", "dest": "/manifest.json" },
+		{ "src": "/sw.js", "dest": "/sw.js", "headers": { "Cache-Control": "no-cache" } },
+		{ "src": "/workbox-(.*)", "dest": "/workbox-$1" },
+
+		{ "src": "/assets/(.*)", "dest": "/assets/$1", "headers": { "Cache-Control": "max-age=2592000" } },
+		{ "src": "/build/(.*)", "dest": "/build/$1" },
+		{ "src": "/lib/(.*)", "dest": "/lib/$1" },
+
+		{ "src": "/(.*)", "dest": "/index.html", "headers": { "Cache-Control": "no-cache" } }
+	]
+}
