@@ -1,6 +1,6 @@
 # Ionic Nav Bug
 
-Reproduces a bug with `ion-nav`'s `pop` method.
+Reproduces a bug with `ion-nav`'s `pop` method. Deployed on https://ionic-nav-bug.now.sh.
 
 The routes are set up in a way where two different routes render the same component:
 
