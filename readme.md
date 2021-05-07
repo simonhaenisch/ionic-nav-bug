@@ -1,6 +1,8 @@
 # Ionic Nav Bug
 
-Reproduces a bug with `ion-nav`'s `pop` method. Deployed on https://ionic-nav-bug.vercel.app.
+Reproduces a bug with `ion-nav`'s `pop` method: [ionic-team/ionic-framework#19030](https://github.com/ionic-team/ionic-framework/issues/19030).
+
+Deployed on https://ionic-nav-bug.vercel.app.
 
 The routes are set up in a way where two different routes render the same component:
 
